@@ -4,49 +4,21 @@ import {ic_barcode} from 'assets/images';
 import {colors} from 'assets/v2';
 import {DimentionUtils, Text} from 'common-ui';
 import {BottomMainConfig} from 'config/RouteConfig';
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Image, TouchableOpacity, View} from 'react-native';
-import TabIconView from '../TabIconView';
 import style from './style';
 import tabs from './tabs';
-import {useAuth} from 'providers/contexts/AuthContext';
-import useTask from 'hook/useTask';
-import {requestUserPermission} from 'utils/NotificationUtils';
-import {employeeService} from 'services/EmployeeService';
+import TabIconView from '../TabIconView';
 
 interface Props {
   onNavigateBarcode: () => void;
-  onNavigateAccountStore: () => void;
 }
 
 const Tab = createBottomTabNavigator<MainBottomProps>();
 
 export interface MainBottomProps extends ParamListBase {}
 
-const MainView: React.FC<Props> = ({
-  onNavigateBarcode,
-  onNavigateAccountStore,
-}) => {
-  const {locationSelected, profile} = useAuth();
-  const {task} = useTask();
-
-  useEffect(() => {
-    if (profile) {
-      requestUserPermission(profile.code);
-      employeeService.getEmployeeDetail(profile.code);
-    }
-  }, [profile]);
-
-  useEffect(() => {
-    if (locationSelected.selected) {
-      return;
-    }
-    onNavigateAccountStore();
-  }, [locationSelected, onNavigateAccountStore]);
-  if (!locationSelected.selected) {
-    return <View />;
-  }
-
+const MainView: React.FC<Props> = ({onNavigateBarcode}) => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -54,9 +26,6 @@ const MainView: React.FC<Props> = ({
         tabBarHideOnKeyboard: true,
       }}
       tabBar={({state, descriptors, navigation, insets}) => {
-        if (state.index === 0 && task) {
-          return;
-        }
         return (
           <View
             style={[

@@ -1,7 +1,7 @@
 /*
  * Create By: Được Nguyễn Cố
  * Version: 1.0.0
- * Module: App
+ * Module: Sunhouse Ecom App
  */
 import {MainStore} from 'reduxs/MainStore';
 import React from 'react';
@@ -52,7 +52,7 @@ const App: React.FC = () => {
   return (
     <Provider store={MainStore}>
       <GestureHandlerRootView style={ThemeStyle.container}>
-          <MainUi />
+        <MainUi />
       </GestureHandlerRootView>
     </Provider>
   );

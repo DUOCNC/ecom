@@ -11,21 +11,20 @@ const dataIntro: Array<DataIntro> = [
   {
     id: 1,
     image: introduce_one,
-    text: 'Yody ra mắt ứng dụng nội bộ',
-    subText: 'Phiên bản đầu tiên dành riêng cho Chuyên gia tư vấn',
+    text: 'title 1',
+    subText: 'text 1',
   },
   {
     id: 2,
     image: introduce_two,
-    text: 'Thông tin sản phẩm',
-    subText:
-      'Chỉ với một thao tác, dễ dàng tra cứu thông tin chi tiết sản phẩm',
+    text: 'title 2',
+    subText: 'text 2',
   },
   {
     id: 3,
     image: introduce_three,
-    text: 'Doanh thu cá nhân',
-    subText: 'Cung cấp thông tin lương theo doanh thu dự kiến trong tháng',
+    text: 'title 3',
+    subText: 'text 3',
   },
 ];
 

@@ -3,7 +3,7 @@ import {CountryResponse, DistrictResponse, CityResponse} from 'model';
 import {WardResponse} from 'model/responses';
 
 class ContentApi extends BaseApi {
-  private readonly BaseUrlApi = '/unicorn/content-service';
+  private readonly BaseUrlApi = '/content-service';
 
   constructor() {
     super();

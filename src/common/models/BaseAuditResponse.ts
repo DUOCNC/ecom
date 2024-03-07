@@ -1,7 +1,6 @@
 /**
  * Base Audit Response
  * v1.0
- * Created By Anh Nguyen With v1.0
  */
 export interface BaseAuditResponse {
   /**

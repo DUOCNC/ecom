@@ -5,7 +5,7 @@ import MainStack from './screens/MainStack';
 const AppStack: FC = () => {
   const infoReducer = useAppSelector(state => state.info);
   console.log('infoReducer', infoReducer);
-  
+
   const app = useMemo(() => {
     return <MainStack />;
   }, []);

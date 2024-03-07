@@ -4,12 +4,9 @@ import {
   MobileVersionRequest,
   NextVersionResponse,
 } from 'model';
-import {LogActionRequest} from 'model/request';
-import {LoginRequest} from 'model/request/LoginRequest';
-import {LogActionResponse} from 'model/responses';
 
 class MobileApi extends BaseApi {
-  private readonly BaseUrlApi = '/unicorn/mobile-service';
+  private readonly BaseUrlApi = '/mobile-service';
 
   constructor() {
     super();
@@ -29,16 +26,6 @@ class MobileApi extends BaseApi {
     return BaseAxios.get<Result<NextVersionResponse>>(url, {
       params: request,
     });
-  }
-
-  fakeLogin(request: LoginRequest) {
-    let url = this.getUrl('public/login');
-    return BaseAxios.post(url, request);
-  }
-
-  logActionApi(request: LogActionRequest) {
-    let url = this.getUrl('action-log');
-    return BaseAxios.post<Result<LogActionResponse>>(url, request);
   }
 }
 

@@ -1,7 +1,5 @@
 import {Result} from 'common';
 import {ErrorType} from 'common-ui';
-import keycloak from 'config/KeycloakConfig';
-import AuthenticationUtils from '../common/authentication/AuthenticationUtils';
 
 export default class BaseService {
   protected readonly DefaultError =
@@ -12,7 +10,7 @@ export default class BaseService {
   ) {
     if (error.response) {
       if (error.response.status === 401) {
-        AuthenticationUtils.remove().then(() => this.logout());
+        //logout
         return;
       }
       onError && onError('Error', this.DefaultError, error.response.status);
@@ -29,20 +27,12 @@ export default class BaseService {
 
   protected handleResponse<T>(response: Result<T>) {
     if (response.code === 40100000) {
-      AuthenticationUtils.remove().then(() => this.logout());
+      //logout
       return;
     }
   }
 
   protected notSuccessResult<T>(response: Result<T>) {
     return response.code !== 20000000;
-  }
-
-  protected logout() {
-    if (keycloak) {
-      keycloak.clearToken();
-    }
-    // MainStore.dispatch(logout());
-    // MainStore.dispatch(clearProfile());
   }
 }

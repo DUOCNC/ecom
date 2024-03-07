@@ -7,6 +7,7 @@ import {
 import React, {createRef, useEffect, useMemo, useState} from 'react';
 import {Dimensions, ImageRequireSource, View} from 'react-native';
 import {Source} from 'react-native-fast-image';
+import Carousel from 'react-native-reanimated-carousel';
 import BannerView from '../BannerView';
 import {IImageInfo} from 'react-native-image-zoom-viewer/built/image-viewer.type';
 import {
@@ -74,6 +75,23 @@ const SlideImageView: React.FC<Props> = ({imageUrls, newsIds}) => {
   return (
     <React.Fragment>
       <View style={{width: DefaultWidth}}>
+        <Carousel
+          width={DefaultWidth}
+          loop={urls.length > 1}
+          autoPlayInterval={2000}
+          autoPlay
+          height={DefaultHeight}
+          renderItem={({item, index}) => (
+            <BannerView
+              key={index}
+              bannerUrl={item}
+              onPress={() => {
+                onItemPress(index);
+              }}
+            />
+          )}
+          data={urls}
+        />
       </View>
       <ImageContainerViewer ref={viewerRef} />
     </React.Fragment>

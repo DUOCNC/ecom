@@ -1,6 +1,5 @@
 import {Result} from 'common';
 import {MainErrorType} from '../enums';
-import keycloak from 'config/KeycloakConfig';
 import AuthenticationUtils from '../../../common/authentication/AuthenticationUtils';
 import {ErrorType} from 'common-ui';
 
@@ -52,11 +51,5 @@ export default class BaseService {
 
   protected notSuccessResult<T>(response: Result<T>) {
     return response.code !== 20000000;
-  }
-
-  protected logout() {
-    if (keycloak) {
-      keycloak.clearToken();
-    }
   }
 }

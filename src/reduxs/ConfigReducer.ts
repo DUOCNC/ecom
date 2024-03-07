@@ -5,6 +5,7 @@ const initialState: ConfigReducer = {
   config: {
     hideFeatureFunction: false,
     currentRouteName: '',
+    defaultFlash: undefined,
   },
 };
 
