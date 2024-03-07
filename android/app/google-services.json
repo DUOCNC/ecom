@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "379219467585",
+    "project_id": "sunhouse-ecom",
+    "storage_bucket": "sunhouse-ecom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219467585:android:c03cec86d90adb9ddb15c0",
+        "android_client_info": {
+          "package_name": "com.sunhouse.ecom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuv5vhTMtnnxscsDTgOdg8_HQrZ-JNQtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

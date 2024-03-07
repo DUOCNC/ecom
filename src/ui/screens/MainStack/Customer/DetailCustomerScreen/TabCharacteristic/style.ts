@@ -1,0 +1,253 @@
+import {Colors} from 'assets/colors';
+import {colors} from 'assets/v2';
+import {DimentionUtils} from 'common-ui';
+import {StyleSheet} from 'react-native';
+import {normalize} from 'utils/DimensionsUtils';
+
+const TabHistoryStyle = StyleSheet.create({
+  bodyContainer: {
+    flex: 1,
+  },
+  rowLoading: {
+    marginTop: normalize(24),
+  },
+  container: {
+    flex: 1,
+    marginHorizontal: DimentionUtils.scale(16),
+    borderRadius: DimentionUtils.scale(5),
+    backgroundColor: colors.base.white,
+  },
+  textGroup: {
+    marginTop: DimentionUtils.scale(16),
+    marginHorizontal: DimentionUtils.scale(16),
+    marginBottom: DimentionUtils.scale(8),
+  },
+  body: {
+    flex: 1,
+    marginTop: normalize(16),
+  },
+  btnEmpty: {
+    width: normalize(248),
+  },
+  txtCreate: {
+    color: '#1656F1',
+  },
+  viewInput: {
+    flexDirection: 'row',
+    backgroundColor: '#F2F3F5',
+    marginHorizontal: normalize(24),
+    paddingHorizontal: normalize(12),
+    height: normalize(40),
+    borderRadius: normalize(12),
+    marginVertical: normalize(12),
+    alignItems: 'center',
+  },
+  input: {
+    marginLeft: normalize(8),
+    flex: 1,
+  },
+  headerSearch: {
+    paddingHorizontal: normalize(16),
+    paddingTop: normalize(8),
+    paddingBottom: normalize(16),
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: '100%',
+  },
+  viewLoading: {
+    position: 'absolute',
+    alignSelf: 'center',
+    top: normalize(60),
+    zIndex: 100000,
+  },
+  emptyView: {
+    backgroundColor: Colors.White,
+    flex: 1,
+    paddingHorizontal: normalize(16),
+    paddingVertical: normalize(12),
+  },
+  summary: {
+    backgroundColor: colors.base.white,
+    borderRadius: DimentionUtils.scale(5),
+    marginHorizontal: DimentionUtils.scale(16),
+    marginBottom: DimentionUtils.scale(8),
+    height: DimentionUtils.scale(112),
+    paddingHorizontal: DimentionUtils.scale(16),
+    paddingTop: DimentionUtils.scale(16),
+  },
+  summaryRow: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'space-between',
+  },
+});
+
+const style = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    paddingHorizontal: DimentionUtils.scale(16),
+  },
+  left: {
+    flex: 1,
+    paddingVertical: DimentionUtils.scale(4),
+    paddingRight: DimentionUtils.scale(4),
+    height: DimentionUtils.scale(220),
+  },
+  right: {
+    flex: 1,
+    paddingLeft: DimentionUtils.scale(4),
+    paddingVertical: DimentionUtils.scale(4),
+    height: DimentionUtils.scale(220),
+  },
+
+  progressWrapper: {
+    borderRadius: 5,
+    backgroundColor: '#f5faff',
+    paddingVertical: 12,
+    paddingHorizontal: 10,
+    height: '100%',
+  },
+  empty: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 35,
+    margin: 0,
+  },
+  emptyDescription: {
+    color: '#667085',
+    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: '400',
+    lineHeight: 18,
+  },
+  horizontal: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  vertical: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  progressHorizontal: {
+    paddingTop: DimentionUtils.scale(8),
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    overflow: 'hidden',
+  },
+  progress: {
+    width: 24,
+    borderRadius: 8,
+    height: 20,
+    lineHeight: 20,
+    paddingHorizontal: 5,
+    backgroundColor: '#0071e9',
+    color: 'white',
+    fontSize: 12,
+    fontWeight: '500',
+    marginRight: DimentionUtils.scale(2),
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    paddingBottom: DimentionUtils.scale(2),
+    marginBottom: DimentionUtils.scale(2),
+  },
+  progressItem: {
+    backgroundColor: '#0071e9',
+    borderRadius: DimentionUtils.scale(8),
+    height: DimentionUtils.scale(16),
+    justifyContent: 'center',
+    paddingHorizontal: DimentionUtils.scale(4),
+    marginBottom: DimentionUtils.scale(4),
+    width: 180,
+    marginTop: DimentionUtils.scale(2),
+  },
+  progressVertical: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  progressVerticalCol: {
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+  },
+  progressContent: {
+    alignItems: 'flex-end',
+    flexDirection: 'row',
+    marginBottom: DimentionUtils.scale(4),
+  },
+  size: {alignContent: 'center', alignItems: 'center'},
+  progressSize: {
+    borderRadius: 16,
+    width: 18,
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '600',
+    lineHeight: 18,
+    letterSpacing: -0.03,
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    paddingVertical: 2,
+    borderColor: '#fff',
+    alignSelf: 'flex-end',
+  },
+  progressColor: {
+    borderRadius: 8,
+    width: 18,
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '600',
+    lineHeight: 18,
+    letterSpacing: -0.03,
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    paddingVertical: 2,
+    borderColor: '#616161',
+  },
+  title: {
+    color: '#000',
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 22,
+    marginBottom: 10,
+  },
+  subTitle: {
+    color: '#667085',
+    textAlign: 'center',
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 22,
+    marginTop: 10,
+    marginBottom: 0,
+  },
+  option: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    backgroundColor: Colors.Primary,
+    paddingBottom: DimentionUtils.scale(8),
+    paddingTop: DimentionUtils.scale(8),
+    borderRadius: DimentionUtils.scale(8),
+    color: Colors.White,
+  },
+  optionTransparent: {
+    backgroundColor: 'transparent',
+  },
+  rowOption: {
+    backgroundColor: Colors.Gray200,
+    borderRadius: DimentionUtils.scale(8),
+    marginHorizontal: DimentionUtils.scale(16),
+    marginBottom: DimentionUtils.scale(8),
+    flexDirection: 'row',
+  },
+});
+
+export {TabHistoryStyle, style};

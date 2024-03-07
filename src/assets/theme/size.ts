@@ -1,0 +1,36 @@
+import {normalize} from 'utils/DimensionsUtils';
+
+const Size = {
+  H1LineHeight: normalize(45),
+  H2LineHeight: normalize(40),
+  H3LineHeight: normalize(32),
+  H1FontSize: 36,
+  H2FontSize: 32,
+  H3FontSize: 24,
+  H4FontSize: 30,
+  T0LineHeight: normalize(28),
+  T1LineHeight: normalize(24),
+  T2LineHeight: normalize(22),
+  T3LineHeight: normalize(20),
+  T4LineHeight: normalize(18),
+  T5LineHeight: normalize(14),
+  T0FontSize: 20,
+  T1FontSize: 18,
+  T2FontSize: 16,
+  T3FontSize: 14,
+  T4FontSize: 12,
+  DefaultTextSize: 14,
+  DefaultInputSize: 16,
+  DefaultButtonRadius: normalize(5),
+  DefaultButtonHeight: normalize(48),
+  DefaultButtonPaddingHorizontal: normalize(16),
+  IconDefaultSize: normalize(24),
+  DefaultFormInputHeight: normalize(48),
+  DefaultFormInputRadius: normalize(5),
+  DefaultFormInputPaddingHorizontal: normalize(12),
+  DefaultToolbarHeight: normalize(44),
+  DefaultHorizontal: normalize(16),
+  DefaultVertical: normalize(12),
+};
+
+export default Size;

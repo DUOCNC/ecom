@@ -1,0 +1,30 @@
+export interface DetailCustomerViewer {
+  id: number;
+  fullName: string;
+  point: string;
+  customerLevel: string;
+  birthday: string;
+  phone: string;
+  customerType: string;
+  customerGroup: string;
+  cardNumber: string;
+  assignedStore: string;
+  totalFinishedOrder: string;
+  averageOrderValue: string;
+  totalPaidAmount: string;
+  firstOrderTime: string;
+  storeOfFirstOrderOffline: string;
+  lastOrderTime: string;
+  storeOfLastOrderOffline: string;
+  numberOfDaysWithoutPurchase: string;
+  totalReturnedOrder: string;
+  totalRefundedAmount: string;
+  gender: string;
+  email: string;
+  weddingDate: string;
+  company: string;
+  identityNumber: string;
+  taxCode: string;
+  responsibleStaff: string;
+  description: string;
+}

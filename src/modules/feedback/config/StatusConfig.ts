@@ -1,0 +1,60 @@
+import {FeedbackStatus} from 'modules/feedback/enums';
+
+export const StatusesConfig = [
+  {
+    id: 0,
+    name: 'Đợi tiếp nhận',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.PENDING,
+    isDeleted: false,
+  },
+  {
+    id: 1,
+    name: 'Chưa có CGTV',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.EMPTY_ADVISOR,
+    isDeleted: false,
+  },
+  {
+    id: 2,
+    name: 'Đang tiếp',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.IN_PROGRESS,
+    isDeleted: false,
+  },
+  {
+    id: 3,
+    name: 'Đã mua',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.BOUGHT,
+    isDeleted: false,
+  },
+  {
+    id: 4,
+    name: 'Không mua',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.NOT_BUY,
+    isDeleted: false,
+  },
+  {
+    id: 5,
+    name: 'Tất cả',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.ALL,
+    isDeleted: false,
+  },
+  {
+    id: 6,
+    name: 'Đã xóa',
+    offsetY: 0,
+    y: 0,
+    status: FeedbackStatus.DELETED,
+    isDeleted: true,
+  },
+];
