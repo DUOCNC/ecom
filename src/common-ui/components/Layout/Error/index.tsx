@@ -250,9 +250,9 @@ const Error: React.FC<ErrorProps> = ({
           <TouchableOpacity
             onPress={() => {
               let link = Platform.select({
-                ios: 'itms-apps://itunes.apple.com/bg/app/unicorn/id1631861386',
-                android: 'market://details?id=com.yody.unicorn',
-                default: 'https://unicorn.yody.io/',
+                ios: '',
+                android: 'linkandroid',
+                default: '',
               });
               Linking.canOpenURL(link).then(
                 supported => {

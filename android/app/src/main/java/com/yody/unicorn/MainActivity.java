@@ -1,4 +1,4 @@
-package com.yody.unicorn;
+package com.sunhouse.ecom;
 
 import android.os.Bundle;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "SunhouseEcomMobile";
+        return "SunhouseLogMobile";
     }
 
     @Override

@@ -10,6 +10,8 @@ const AppConfig = {
   Version: parseInt(Config.APP_VERSION ? Config.APP_VERSION : '1', 10),
   OS: Platform.select({ios: 'IOS', android: 'ANDROID', default: ''}),
   BaseUrl: Config.API_BASE_URL,
+  AppID: Config.API_APP_ID ?? '0FBE6E70-150C-4730-81D0-9C073F1B45A3',
+  Token: Config.API_TOKEN,
 };
 
 export {AppConfig};

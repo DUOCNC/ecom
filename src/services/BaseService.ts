@@ -1,5 +1,6 @@
 import {Result} from 'common';
 import {ErrorType} from 'common-ui';
+import AuthenticationUtils from '../common/authentication/AuthenticationUtils';
 
 export default class BaseService {
   protected readonly DefaultError =
@@ -10,7 +11,9 @@ export default class BaseService {
   ) {
     if (error.response) {
       if (error.response.status === 401) {
-        //logout
+        AuthenticationUtils.remove().then(() => {
+          //TODO handle logout
+        });
         return;
       }
       onError && onError('Error', this.DefaultError, error.response.status);
@@ -27,7 +30,9 @@ export default class BaseService {
 
   protected handleResponse<T>(response: Result<T>) {
     if (response.code === 40100000) {
-      //logout
+      AuthenticationUtils.remove().then(() => {
+        //TODO: handle logout
+      });
       return;
     }
   }

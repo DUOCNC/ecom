@@ -5,11 +5,11 @@ import {CTButtonIcon} from 'components/Button';
 import {normalize} from 'utils/DimensionsUtils';
 import {icon_flash, icon_off_flash, ic_close_white} from 'assets/images';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {MainStackScreenProps} from '../../../../../../../../mobile/yody-app-unicorn-mobile/src/ui/screens/MainStack';
 import CTLayout from 'components/CTLayout';
 import {RNCamera} from 'react-native-camera';
 import {View} from 'react-native';
 import {useConfig} from 'hook';
+import {MainStackScreenProps} from '..';
 
 type Props = MainStackScreenProps<'BarcodeScanner'>;
 

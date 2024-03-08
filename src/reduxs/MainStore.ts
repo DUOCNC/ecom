@@ -6,6 +6,7 @@ import versionReducer from './VersionReducer';
 import configReducer from './ConfigReducer';
 import infoReducer from './InfoReducer';
 import networkReducer from './NetworkReducer';
+import UserReducer from './UserReducer';
 
 export const MainStore = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const MainStore = configureStore({
     countries: countryReducer,
     version: versionReducer,
     config: configReducer,
+    user: UserReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({serializableCheck: false}),

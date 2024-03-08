@@ -6,7 +6,6 @@ import {Platform, AppRegistry} from 'react-native';
 import App from './src/App';
 import {name as appName} from './app.json';
 import messaging from '@react-native-firebase/messaging';
-import {Linking} from 'react-native';
 
 if (Platform.OS === 'android') {
   require('intl');
@@ -15,10 +14,6 @@ if (Platform.OS === 'android') {
 
 messaging().setBackgroundMessageHandler(async message => {
   console.log(message);
-});
-
-messaging().onNotificationOpenedApp(messaging => {
-  Linking.openURL(`unicorn://app/${messaging.data.screen}`);
 });
 
 AppRegistry.registerComponent(appName, () => App);

@@ -5,6 +5,7 @@ import {CountryResponse} from './CountryResponse';
 import {DistrictResponse} from './DistrictResponse';
 import {CityResponse} from './CityResponse';
 import {WardResponse} from './WardResponse';
+import {LoginResponse} from './LoginResponse';
 
 export type {
   MobileConfigResponse,
@@ -14,4 +15,5 @@ export type {
   DistrictResponse,
   WardResponse,
   CityResponse,
+  LoginResponse,
 };

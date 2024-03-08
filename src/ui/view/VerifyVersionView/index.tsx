@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {ErrorType, Layout, Typography} from 'common-ui';
 import {TouchableOpacity} from 'react-native';
-import {mobileService} from 'services';
 import {colors} from 'assets/v2';
 
 interface Props {
@@ -12,15 +11,7 @@ const VerifyVersionView: React.FC<Props> = ({children, onVerifyVersion}) => {
   const [error, setError] = useState<ErrorType | false>(false);
   const [msgError, setMsgError] = useState<string | undefined>(undefined);
   const verifyVersion = useCallback(() => {
-    mobileService.getVersion(
-      () => {
-        onVerifyVersion();
-      },
-      (code, msg) => {
-        setError(code);
-        setMsgError(msg);
-      },
-    );
+    onVerifyVersion();
   }, [onVerifyVersion]);
   useEffect(() => {
     verifyVersion();

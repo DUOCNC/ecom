@@ -1,8 +1,6 @@
-import axios, {AxiosRequestConfig} from 'axios';
-import {AuthenticationUtils} from 'common/authentication';
+import axios from 'axios';
 import {StringUtils} from 'common/utils';
 import {AppConfig} from 'config/AppConfig';
-import {camelizeKeys, decamelizeKeys} from 'humps';
 import * as queryString from 'query-string';
 import DeviceInfo from 'react-native-device-info';
 import {Platform} from 'react-native';
@@ -15,13 +13,9 @@ export default class AxiosProvider {
       baseURL: AppConfig.BaseUrl,
     });
     axiosV1.interceptors.request.use(async request => {
-      let authentication = await AuthenticationUtils.get();
-      if (authentication != null) {
-        let Authorization = StringUtils.format(
-          '{0} {1}',
-          'Bearer',
-          authentication.token,
-        );
+      const token = AppConfig.Token;
+      if (token != null) {
+        let Authorization = StringUtils.format('{0} {1}', 'Basic', token);
 
         let header = {
           Authorization: Authorization,
@@ -34,32 +28,8 @@ export default class AxiosProvider {
         };
         request.headers = header;
       }
-      this.handleRequest(request);
       return request;
     });
-    axiosV1.interceptors.response.use(
-      result => {
-        if (
-          result.data &&
-          result.headers['content-type'] === 'application/json'
-        ) {
-          result.data = camelizeKeys(result.data);
-        }
-        return result;
-      },
-      error => {
-        return Promise.reject(error);
-      },
-    );
     return axiosV1;
-  }
-
-  private static handleRequest(request: AxiosRequestConfig<any>) {
-    if (request.data) {
-      request.data = decamelizeKeys(request.data);
-    }
-    if (request.params) {
-      request.params = decamelizeKeys(request.params);
-    }
   }
 }

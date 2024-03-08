@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   img: {
-    width: normalize(25),
+    width: normalize(50),
     resizeMode: 'contain',
   },
   loading: {

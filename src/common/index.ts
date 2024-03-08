@@ -1,6 +1,5 @@
 import {BaseAxios, BaseApi} from './base';
 import {
-  AbstractCdn,
   AbstractCurrency,
   BaseAuditResponse,
   IView,
@@ -21,7 +20,6 @@ export {
   NumberUtils,
   Optional,
   AbstractCurrency,
-  AbstractCdn,
 };
 
 export type {BaseAuditResponse, IView, Result, ApiReducer, Metadata, Pageable};

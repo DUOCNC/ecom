@@ -1,8 +1,4 @@
-import AccountJobEntity from '../entities/AccountJobEntity';
-
 export interface AccountResponse {
-  accountJobs: Array<AccountJobEntity>;
-  accountStores: Array<AccountStore>;
   activated: boolean;
   address: string;
   authorities: Array<string>;
@@ -27,9 +23,4 @@ export interface AccountResponse {
   positionTitle: string;
   departmentId: number;
   departmentName: string;
-}
-
-export interface AccountStore {
-  storeId: number;
-  store: string;
 }

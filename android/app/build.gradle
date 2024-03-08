@@ -189,17 +189,10 @@ android {
     }
     flavorDimensions "default"
     productFlavors {
-        dev {
-            applicationIdSuffix '.dev'
-            resValue "string", "build_config_package", "com.sunhouse.ecom"
-            resValue "string", "app_name", "Sunhouse Ecom Dev"
-            versionCode 1
-            versionName "1.0"
-        }
         production {
             versionCode 1
             versionName "1.0"
-            resValue "string", "app_name", "Sunhouse Ecom"
+            resValue "string", "app_name", "Sunhouse Log"
         }
     }
     buildTypes {

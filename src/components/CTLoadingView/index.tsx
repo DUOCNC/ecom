@@ -1,4 +1,4 @@
-import {chuy} from 'assets/images';
+import {sunhouse_logo_black} from 'assets/images';
 import React from 'react';
 import {Image, View} from 'react-native';
 import {CircleSnail} from 'react-native-progress';
@@ -9,7 +9,7 @@ import {normalize} from 'utils/DimensionsUtils';
 const LoadingView: React.FC = () => {
   return (
     <View style={styles.viewLoading}>
-      <Image style={styles.img} source={chuy} />
+      <Image style={styles.img} source={sunhouse_logo_black} />
       <CircleSnail
         color={Colors.Secondary}
         style={styles.loading}

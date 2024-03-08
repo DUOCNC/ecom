@@ -1,4 +1,4 @@
-package com.yody.unicorn;
+package com.sunhouse.ecom;
 
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -73,7 +73,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.yody.unicorn.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.sunhouse.ecom.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

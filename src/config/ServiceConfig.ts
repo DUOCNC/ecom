@@ -1,5 +1,5 @@
-const Sunhouse = '/appapi';
-
 export const ServiceConfig = {
-  Mobile: `${Sunhouse}/mobile-service`,
+  Mobile: 'Mobile',
+  Account: 'Account',
+  CustomerAccount: 'CustomerAccount',
 };

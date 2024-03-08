@@ -71,6 +71,7 @@ const CTFormInput = React.forwardRef<TextInput, CTInputProps>((props, ref) => {
   const [focusable, setFocusable] = useState<boolean>(false);
   const [secureTextEntry, setSecureTextEntry] = useState<boolean>(true);
   const moveText = useRef(new Animated.Value(0)).current;
+
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const dispatch = useDispatch();
   const moveTextTop = useCallback(() => {
